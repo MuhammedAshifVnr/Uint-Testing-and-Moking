@@ -11,7 +11,7 @@ import (
 
 func TestGetuser(t *testing.T) {
 	gin.SetMode(gin.TestMode)
-	r := gin.Default()
+	r := gin.New()
 	r.GET("/user/:id", GetUser)
 
 	testcases := []struct {
