@@ -13,10 +13,13 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: 1.20.0
+        go-version: 1.22
 
     - name: instsll dependencis 
       run: go mod tidy
 
     - name: Run tests
       run: go run -v ./...
+
+    - name: Build
+      run: go buil -v ./...
